@@ -1,0 +1,4 @@
+tensorflow>=2.8.0
+tensorflow-lattice>=2.0.10
+python-sat>=0.1.7.dev16
+PySDD==0.2.10

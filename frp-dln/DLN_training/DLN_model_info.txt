@@ -1,0 +1,364 @@
+###### australian ######
+5/5 [==============================] - 0s 2ms/step - loss: 0.2880 - binary_accuracy: 0.8841
+[0.2880459129810333, 0.8840579986572266]
+Model: "model"
+__________________________________________________________________________________________________
+ Layer (type)                   Output Shape         Param #     Connected to                     
+==================================================================================================
+ A1 (InputLayer)                [(None, 1)]          0           []                               
+                                                                                                  
+ A2 (InputLayer)                [(None, 1)]          0           []                               
+                                                                                                  
+ A3 (InputLayer)                [(None, 1)]          0           []                               
+                                                                                                  
+ A4 (InputLayer)                [(None, 1)]          0           []                               
+                                                                                                  
+ A5 (InputLayer)                [(None, 1)]          0           []                               
+                                                                                                  
+ A6 (InputLayer)                [(None, 1)]          0           []                               
+                                                                                                  
+ A7 (InputLayer)                [(None, 1)]          0           []                               
+                                                                                                  
+ A8 (InputLayer)                [(None, 1)]          0           []                               
+                                                                                                  
+ A9 (InputLayer)                [(None, 1)]          0           []                               
+                                                                                                  
+ A10 (InputLayer)               [(None, 1)]          0           []                               
+                                                                                                  
+ A11 (InputLayer)               [(None, 1)]          0           []                               
+                                                                                                  
+ A12 (InputLayer)               [(None, 1)]          0           []                               
+                                                                                                  
+ A13 (InputLayer)               [(None, 1)]          0           []                               
+                                                                                                  
+ A14 (InputLayer)               [(None, 1)]          0           []                               
+                                                                                                  
+ A1_cab (PWLCalibration)        (None, 1)            20          ['A1[0][0]']                     
+                                                                                                  
+ A2_cab (PWLCalibration)        (None, 1)            20          ['A2[0][0]']                     
+                                                                                                  
+ A3_cab (PWLCalibration)        (None, 1)            20          ['A3[0][0]']                     
+                                                                                                  
+ A4_cab (PWLCalibration)        (None, 1)            20          ['A4[0][0]']                     
+                                                                                                  
+ A5_cab (PWLCalibration)        (None, 1)            20          ['A5[0][0]']                     
+                                                                                                  
+ A6_cab (PWLCalibration)        (None, 1)            20          ['A6[0][0]']                     
+                                                                                                  
+ A7_cab (PWLCalibration)        (None, 1)            20          ['A7[0][0]']                     
+                                                                                                  
+ A8_cab (PWLCalibration)        (None, 1)            20          ['A8[0][0]']                     
+                                                                                                  
+ A9_cab (PWLCalibration)        (None, 1)            20          ['A9[0][0]']                     
+                                                                                                  
+ A10_cab (PWLCalibration)       (None, 1)            20          ['A10[0][0]']                    
+                                                                                                  
+ A11_cab (PWLCalibration)       (None, 1)            20          ['A11[0][0]']                    
+                                                                                                  
+ A12_cab (PWLCalibration)       (None, 1)            20          ['A12[0][0]']                    
+                                                                                                  
+ A13_cab (PWLCalibration)       (None, 1)            20          ['A13[0][0]']                    
+                                                                                                  
+ A14_cab (PWLCalibration)       (None, 1)            20          ['A14[0][0]']                    
+                                                                                                  
+ rtl1 (RTL)                     (None, 3)            243         ['A1_cab[0][0]',                 
+                                                                  'A2_cab[0][0]',                 
+                                                                  'A3_cab[0][0]',                 
+                                                                  'A4_cab[0][0]',                 
+                                                                  'A5_cab[0][0]',                 
+                                                                  'A6_cab[0][0]',                 
+                                                                  'A7_cab[0][0]']                 
+                                                                                                  
+ rtl2 (RTL)                     (None, 3)            243         ['A8_cab[0][0]',                 
+                                                                  'A9_cab[0][0]',                 
+                                                                  'A10_cab[0][0]',                
+                                                                  'A11_cab[0][0]',                
+                                                                  'A12_cab[0][0]',                
+                                                                  'A13_cab[0][0]',                
+                                                                  'A14_cab[0][0]']                
+                                                                                                  
+ concatenate (Concatenate)      (None, 6)            0           ['rtl1[0][0]',                   
+                                                                  'rtl2[0][0]']                   
+                                                                                                  
+ linear (Linear)                (None, 1)            7           ['concatenate[0][0]']            
+                                                                                                  
+ dense (Dense)                  (None, 1)            2           ['linear[0][0]']                 
+                                                                                                  
+==================================================================================================
+Total params: 775
+Trainable params: 775
+Non-trainable params: 0
+__________________________________________________________________________________________________
+
+###### breast_cancer ######
+2/2 [==============================] - 0s 2ms/step - loss: 0.6780 - binary_accuracy: 0.6724
+[0.678011953830719, 0.6724137663841248]
+Model: "model"
+__________________________________________________________________________________________________
+ Layer (type)                   Output Shape         Param #     Connected to                     
+==================================================================================================
+ age (InputLayer)               [(None, 1)]          0           []                               
+                                                                                                  
+ menopause (InputLayer)         [(None, 1)]          0           []                               
+                                                                                                  
+ tumor-size (InputLayer)        [(None, 1)]          0           []                               
+                                                                                                  
+ inv-nodes (InputLayer)         [(None, 1)]          0           []                               
+                                                                                                  
+ node-caps (InputLayer)         [(None, 1)]          0           []                               
+                                                                                                  
+ deg-malig (InputLayer)         [(None, 1)]          0           []                               
+                                                                                                  
+ breast (InputLayer)            [(None, 1)]          0           []                               
+                                                                                                  
+ breast-quad (InputLayer)       [(None, 1)]          0           []                               
+                                                                                                  
+ irradiat (InputLayer)          [(None, 1)]          0           []                               
+                                                                                                  
+ age_cab (PWLCalibration)       (None, 1)            20          ['age[0][0]']                    
+                                                                                                  
+ menopause_cab (PWLCalibration)  (None, 1)           20          ['menopause[0][0]']              
+                                                                                                  
+ tumor-size_cab (PWLCalibration  (None, 1)           20          ['tumor-size[0][0]']             
+ )                                                                                                
+                                                                                                  
+ inv-nodes_cab (PWLCalibration)  (None, 1)           20          ['inv-nodes[0][0]']              
+                                                                                                  
+ node-caps_cab (PWLCalibration)  (None, 1)           20          ['node-caps[0][0]']              
+                                                                                                  
+ deg-malig_cab (PWLCalibration)  (None, 1)           20          ['deg-malig[0][0]']              
+                                                                                                  
+ breast_cab (PWLCalibration)    (None, 1)            20          ['breast[0][0]']                 
+                                                                                                  
+ breast-quad_cab (PWLCalibratio  (None, 1)           20          ['breast-quad[0][0]']            
+ n)                                                                                               
+                                                                                                  
+ irradiat_cab (PWLCalibration)  (None, 1)            20          ['irradiat[0][0]']               
+                                                                                                  
+ rtl (RTL)                      (None, 3)            243         ['age_cab[0][0]',                
+                                                                  'menopause_cab[0][0]',          
+                                                                  'tumor-size_cab[0][0]',         
+                                                                  'inv-nodes_cab[0][0]',          
+                                                                  'node-caps_cab[0][0]',          
+                                                                  'deg-malig_cab[0][0]',          
+                                                                  'breast_cab[0][0]',             
+                                                                  'breast-quad_cab[0][0]',        
+                                                                  'irradiat_cab[0][0]']           
+                                                                                                  
+ linear (Linear)                (None, 1)            4           ['rtl[0][0]']                    
+                                                                                                  
+ dense (Dense)                  (None, 1)            2           ['linear[0][0]']                 
+                                                                                                  
+==================================================================================================
+Total params: 429
+Trainable params: 429
+Non-trainable params: 0
+__________________________________________________________________________________________________
+
+###### heart_c ######
+2/2 [==============================] - 0s 2ms/step - loss: 0.5933 - binary_accuracy: 0.7377
+[0.5933178663253784, 0.7377049326896667]
+Model: "model"
+__________________________________________________________________________________________________
+ Layer (type)                   Output Shape         Param #     Connected to                     
+==================================================================================================
+ age (InputLayer)               [(None, 1)]          0           []                               
+                                                                                                  
+ sex (InputLayer)               [(None, 1)]          0           []                               
+                                                                                                  
+ cp (InputLayer)                [(None, 1)]          0           []                               
+                                                                                                  
+ trestbps (InputLayer)          [(None, 1)]          0           []                               
+                                                                                                  
+ chol (InputLayer)              [(None, 1)]          0           []                               
+                                                                                                  
+ fbs (InputLayer)               [(None, 1)]          0           []                               
+                                                                                                  
+ restecg (InputLayer)           [(None, 1)]          0           []                               
+                                                                                                  
+ thalach (InputLayer)           [(None, 1)]          0           []                               
+                                                                                                  
+ exang (InputLayer)             [(None, 1)]          0           []                               
+                                                                                                  
+ oldpeak (InputLayer)           [(None, 1)]          0           []                               
+                                                                                                  
+ slope (InputLayer)             [(None, 1)]          0           []                               
+                                                                                                  
+ ca (InputLayer)                [(None, 1)]          0           []                               
+                                                                                                  
+ thal (InputLayer)              [(None, 1)]          0           []                               
+                                                                                                  
+ age_cab (PWLCalibration)       (None, 1)            20          ['age[0][0]']                    
+                                                                                                  
+ sex_cab (PWLCalibration)       (None, 1)            20          ['sex[0][0]']                    
+                                                                                                  
+ cp_cab (PWLCalibration)        (None, 1)            20          ['cp[0][0]']                     
+                                                                                                  
+ trestbps_cab (PWLCalibration)  (None, 1)            20          ['trestbps[0][0]']               
+                                                                                                  
+ chol_cab (PWLCalibration)      (None, 1)            20          ['chol[0][0]']                   
+                                                                                                  
+ fbs_cab (PWLCalibration)       (None, 1)            20          ['fbs[0][0]']                    
+                                                                                                  
+ restecg_cab (PWLCalibration)   (None, 1)            20          ['restecg[0][0]']                
+                                                                                                  
+ thalach_cab (PWLCalibration)   (None, 1)            20          ['thalach[0][0]']                
+                                                                                                  
+ exang_cab (PWLCalibration)     (None, 1)            20          ['exang[0][0]']                  
+                                                                                                  
+ oldpeak_cab (PWLCalibration)   (None, 1)            20          ['oldpeak[0][0]']                
+                                                                                                  
+ slope_cab (PWLCalibration)     (None, 1)            20          ['slope[0][0]']                  
+                                                                                                  
+ ca_cab (PWLCalibration)        (None, 1)            20          ['ca[0][0]']                     
+                                                                                                  
+ thal_cab (PWLCalibration)      (None, 1)            20          ['thal[0][0]']                   
+                                                                                                  
+ rtl1 (RTL)                     (None, 3)            243         ['age_cab[0][0]',                
+                                                                  'sex_cab[0][0]',                
+                                                                  'cp_cab[0][0]',                 
+                                                                  'trestbps_cab[0][0]',           
+                                                                  'chol_cab[0][0]',               
+                                                                  'fbs_cab[0][0]']                
+                                                                                                  
+ rtl2 (RTL)                     (None, 3)            243         ['restecg_cab[0][0]',            
+                                                                  'thalach_cab[0][0]',            
+                                                                  'exang_cab[0][0]',              
+                                                                  'oldpeak_cab[0][0]',            
+                                                                  'slope_cab[0][0]',              
+                                                                  'ca_cab[0][0]',                 
+                                                                  'thal_cab[0][0]']               
+                                                                                                  
+ concatenate (Concatenate)      (None, 6)            0           ['rtl1[0][0]',                   
+                                                                  'rtl2[0][0]']                   
+                                                                                                  
+ linear (Linear)                (None, 1)            7           ['concatenate[0][0]']            
+                                                                                                  
+ dense (Dense)                  (None, 1)            2           ['linear[0][0]']                 
+                                                                                                  
+==================================================================================================
+Total params: 755
+Trainable params: 755
+Non-trainable params: 0
+__________________________________________________________________________________________________
+
+###### nursery ######
+81/81 [==============================] - 0s 2ms/step - loss: 0.4616 - accuracy: 0.7612
+[0.46157482266426086, 0.761188268661499]
+Model: "model"
+__________________________________________________________________________________________________
+ Layer (type)                   Output Shape         Param #     Connected to                     
+==================================================================================================
+ parents (InputLayer)           [(None, 1)]          0           []                               
+                                                                                                  
+ has_nurs (InputLayer)          [(None, 1)]          0           []                               
+                                                                                                  
+ form (InputLayer)              [(None, 1)]          0           []                               
+                                                                                                  
+ children (InputLayer)          [(None, 1)]          0           []                               
+                                                                                                  
+ housing (InputLayer)           [(None, 1)]          0           []                               
+                                                                                                  
+ finance (InputLayer)           [(None, 1)]          0           []                               
+                                                                                                  
+ social (InputLayer)            [(None, 1)]          0           []                               
+                                                                                                  
+ health (InputLayer)            [(None, 1)]          0           []                               
+                                                                                                  
+ A1_cab (PWLCalibration)        (None, 1)            20          ['parents[0][0]']                
+                                                                                                  
+ A2_cab (PWLCalibration)        (None, 1)            20          ['has_nurs[0][0]']               
+                                                                                                  
+ A3_cab (PWLCalibration)        (None, 1)            20          ['form[0][0]']                   
+                                                                                                  
+ A4_cab (PWLCalibration)        (None, 1)            20          ['children[0][0]']               
+                                                                                                  
+ A5_cab (PWLCalibration)        (None, 1)            20          ['housing[0][0]']                
+                                                                                                  
+ A6_cab (PWLCalibration)        (None, 1)            20          ['finance[0][0]']                
+                                                                                                  
+ A7_cab (PWLCalibration)        (None, 1)            20          ['social[0][0]']                 
+                                                                                                  
+ A8_cab (PWLCalibration)        (None, 1)            20          ['health[0][0]']                 
+                                                                                                  
+ rtl1 (RTL)                     (None, 3)            243         ['A1_cab[0][0]',                 
+                                                                  'A2_cab[0][0]',                 
+                                                                  'A3_cab[0][0]',                 
+                                                                  'A4_cab[0][0]',                 
+                                                                  'A5_cab[0][0]',                 
+                                                                  'A6_cab[0][0]',                 
+                                                                  'A7_cab[0][0]',                 
+                                                                  'A8_cab[0][0]']                 
+                                                                                                  
+ linear (Linear)                (None, 1)            4           ['rtl1[0][0]']                   
+                                                                                                  
+ dense (Dense)                  (None, 4)            8           ['linear[0][0]']                 
+                                                                                                  
+==================================================================================================
+Total params: 415
+Trainable params: 415
+Non-trainable params: 0
+__________________________________________________________________________________________________
+
+###### pima-modified ######
+5/5 [==============================] - 0s 2ms/step - loss: 0.5274 - binary_accuracy: 0.8247
+[0.5273700952529907, 0.8246753215789795]
+Model: "model"
+__________________________________________________________________________________________________
+ Layer (type)                   Output Shape         Param #     Connected to                     
+==================================================================================================
+ Preg (InputLayer)              [(None, 1)]          0           []                               
+                                                                                                  
+ Plas (InputLayer)              [(None, 1)]          0           []                               
+                                                                                                  
+ Pres (InputLayer)              [(None, 1)]          0           []                               
+                                                                                                  
+ Skin (InputLayer)              [(None, 1)]          0           []                               
+                                                                                                  
+ Insu (InputLayer)              [(None, 1)]          0           []                               
+                                                                                                  
+ Mass (InputLayer)              [(None, 1)]          0           []                               
+                                                                                                  
+ Pedi (InputLayer)              [(None, 1)]          0           []                               
+                                                                                                  
+ Age (InputLayer)               [(None, 1)]          0           []                               
+                                                                                                  
+ Preg_cab (PWLCalibration)      (None, 1)            20          ['Preg[0][0]']                   
+                                                                                                  
+ Plas_cab (PWLCalibration)      (None, 1)            20          ['Plas[0][0]']                   
+                                                                                                  
+ Pres_cab (PWLCalibration)      (None, 1)            20          ['Pres[0][0]']                   
+                                                                                                  
+ Skin_cab (PWLCalibration)      (None, 1)            20          ['Skin[0][0]']                   
+                                                                                                  
+ Insu_cab (PWLCalibration)      (None, 1)            20          ['Insu[0][0]']                   
+                                                                                                  
+ Mass_cab (PWLCalibration)      (None, 1)            20          ['Mass[0][0]']                   
+                                                                                                  
+ Pedi_cab (PWLCalibration)      (None, 1)            20          ['Pedi[0][0]']                   
+                                                                                                  
+ Age_cab (PWLCalibration)       (None, 1)            20          ['Age[0][0]']                    
+                                                                                                  
+ rtl (RTL)                      (None, 3)            243         ['Preg_cab[0][0]',               
+                                                                  'Plas_cab[0][0]',               
+                                                                  'Pres_cab[0][0]',               
+                                                                  'Skin_cab[0][0]']               
+                                                                                                  
+ rtl2 (RTL)                     (None, 3)            243         ['Insu_cab[0][0]',               
+                                                                  'Mass_cab[0][0]',               
+                                                                  'Pedi_cab[0][0]',               
+                                                                  'Age_cab[0][0]']                
+                                                                                                  
+ concatenate (Concatenate)      (None, 6)            0           ['rtl[0][0]',                    
+                                                                  'rtl2[0][0]']                   
+                                                                                                  
+ linear (Linear)                (None, 1)            7           ['concatenate[0][0]']            
+                                                                                                  
+ dense (Dense)                  (None, 1)            2           ['linear[0][0]']                 
+                                                                                                  
+==================================================================================================
+Total params: 655
+Trainable params: 655
+Non-trainable params: 0
+__________________________________________________________________________________________________
+

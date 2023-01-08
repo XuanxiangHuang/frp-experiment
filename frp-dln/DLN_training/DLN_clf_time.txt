@@ -1,0 +1,25 @@
+# 05/09
+########## Dataset: australian ##########
+Number of tested data points: 10000
+Max predict() time: 0.7278
+Median predict() time: 0.0812
+
+########## Dataset: breast_cancer ##########
+Number of tested data points: 10000
+Max predict() time: 0.3666
+Median predict() time: 0.0643
+
+########## Dataset: heart_c ##########
+Number of tested data points: 10000
+Max predict() time: 0.2767
+Median predict() time: 0.0750
+
+########## Dataset: nursery ##########
+Number of tested data points: 10000
+Max predict() time: 0.2507
+Median predict() time: 0.0585
+
+########## Dataset: pima-modified ##########
+Number of tested data points: 10000
+Max predict() time: 0.2153
+Median predict() time: 0.0587
