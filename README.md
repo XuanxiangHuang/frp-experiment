@@ -100,3 +100,15 @@ All the reported results in `results` folder:
 2. subfolder `runtime`: accumulated CPU time calling SAT solver/DLN's predict() for each tested instance. And the runtime for each tested instance.
 3. `mono_frp_log.txt` output of `reproduce.py` script.
 4. `mono_frp.txt`: the reported results.
+
+## Citation
+```
+@inproceedings{huang2023feature,
+  title={Feature necessity \& relevancy in ML classifier explanations},
+  author={Huang, Xuanxiang and Cooper, Martin C and Morgado, Antonio and Planes, Jordi and Marques-Silva, Joao},
+  booktitle={Tools and Algorithms for the Construction and Analysis of Systems: 29th International Conference, TACAS 2023, Held as Part of the European Joint Conferences on Theory and Practice of Software, ETAPS 2022, Paris, France, April 22--27, 2023, Proceedings, Part I},
+  pages={167--186},
+  year={2023},
+  organization={Springer}
+}
+```
